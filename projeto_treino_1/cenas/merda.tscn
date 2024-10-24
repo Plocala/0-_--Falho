@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt31p3jgi3tey"]
+
+[ext_resource type="Script" path="res://scrips/merda.gd" id="1_0142u"]
+[ext_resource type="Texture2D" uid="uid://b7154r66nu0om" path="res://sprites/obstaculo.png" id="2_4fec0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sui3s"]
+radius = 8.0
+
+[node name="Merda" type="Area2D"]
+script = ExtResource("1_0142u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sui3s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.19209e-06, 7.15256e-07)
+scale = Vector2(0.0641283, 0.0641283)
+texture = ExtResource("2_4fec0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

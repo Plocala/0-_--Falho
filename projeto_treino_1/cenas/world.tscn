@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://bj8xynjfl8gvb"]
+
+[ext_resource type="Script" path="res://scrips/world.gd" id="1_2jmri"]
+[ext_resource type="PackedScene" uid="uid://dsbw5xuek7oi4" path="res://cenas/player.tscn" id="1_4b00i"]
+[ext_resource type="AudioStream" uid="uid://coew2s8rdspws" path="res://sons/Eu Não Sou Gay.mp3" id="3_rll1a"]
+[ext_resource type="PackedScene" uid="uid://c0vnpfkc5aerr" path="res://cenas/enemy_shurek.tscn" id="4_yff62"]
+[ext_resource type="PackedScene" uid="uid://c2y7ec5dpcn0h" path="res://cenas/enemy_esperma.tscn" id="5_q2bku"]
+[ext_resource type="PackedScene" uid="uid://dt31p3jgi3tey" path="res://cenas/merda.tscn" id="6_eqofl"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_2jmri")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1160.0
+offset_bottom = 648.0
+color = Color(0.51964, 0.724267, 0.350776, 1)
+
+[node name="Player" parent="." instance=ExtResource("1_4b00i")]
+position = Vector2(576, 320)
+scale = Vector2(1.5, 1.5)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+scale = Vector2(15.279, -3.91096)
+stream = ExtResource("3_rll1a")
+volume_db = -15.0
+autoplay = true
+panning_strength = 0.0
+parameters/looping = true
+
+[node name="Enemy_shurek" parent="." instance=ExtResource("4_yff62")]
+position = Vector2(1768, -7.99998)
+scale = Vector2(5, 5)
+
+[node name="Enemy_esperma" parent="." instance=ExtResource("5_q2bku")]
+position = Vector2(1752, -87.9999)
+scale = Vector2(5, 5)
+
+[node name="Merda" parent="." instance=ExtResource("6_eqofl")]
+position = Vector2(1712, -40)

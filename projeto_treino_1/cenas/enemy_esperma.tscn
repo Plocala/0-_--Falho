@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2y7ec5dpcn0h"]
+
+[ext_resource type="Script" path="res://scrips/enemy_esperma.gd" id="1_q3e3c"]
+[ext_resource type="Texture2D" uid="uid://db5n6cwfe8ty6" path="res://sprites/enimy2.png" id="2_kwpgh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0mr0b"]
+radius = 8.0
+
+[node name="Enemy_esperma" type="Area2D"]
+script = ExtResource("1_q3e3c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0mr0b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, -6.70716e-07)
+scale = Vector2(0.0608365, 0.043956)
+texture = ExtResource("2_kwpgh")
